@@ -1,0 +1,479 @@
+1. Computers-MacBook-Pro:homework_part_1 computer$ mkdir death_star
+Computers-MacBook-Pro:homework_part_1 computer$ cd death_star/
+Computers-MacBook-Pro:death_star computer$ touch darth_vader.txt princess_leia.txt storm_trooper.txt
+
+2. Computers-MacBook-Pro:death_star computer$ cd ..
+Computers-MacBook-Pro:homework_part_1 computer$ mkdir galaxy_far_far_away
+Computers-MacBook-Pro:homework_part_1 computer$ cd galaxy_far_far_away/
+Computers-MacBook-Pro:galaxy_far_far_away computer$ mkdir tatooine
+Computers-MacBook-Pro:galaxy_far_far_away computer$ cd tatooine/
+Computers-MacBook-Pro:tatooine computer$ touch luke.txt ben_kenobi.txt
+
+3. Computers-MacBook-Pro:tatooine computer$ mkdir millenium_falcon
+Computers-MacBook-Pro:tatooine computer$ cd millenium_falcon/
+Computers-MacBook-Pro:millenium_falcon computer$ touch han_solo.txt chewbaca.txt
+
+4. Computers-MacBook-Pro:millenium_falcon computer$ cd ..
+Computers-MacBook-Pro:tatooine computer$ ls
+ben_kenobi.txt          luke.txt                millenium_falcon
+Computers-MacBook-Pro:tatooine computer$ mv ben_kenobi.txt obi_wan.txt
+Computers-MacBook-Pro:tatooine computer$ ls
+luke.txt                millenium_falcon        obi_wan.txt
+
+5. Computers-MacBook-Pro:homework_part_1 computer$ cp -r death_star/storm_trooper.txt galaxy
+_far_far_away/tatooine/
+Computers-MacBook-Pro:homework_part_1 computer$ cd ..
+Computers-MacBook-Pro:homework computer$ cd homework_part_1/
+Computers-MacBook-Pro:homework_part_1 computer$ cd galaxy_far_far_away/
+Computers-MacBook-Pro:galaxy_far_far_away computer$ cd tatooine/
+Computers-MacBook-Pro:tatooine computer$ ls
+luke.txt                obi_wan.txt
+millenium_falcon        storm_trooper.txt
+
+6. Computers-MacBook-Pro:tatooine computer$ cd ..
+Computers-MacBook-Pro:galaxy_far_far_away computer$ cd ..
+Computers-MacBook-Pro:homework_part_1 computer$ ls
+command.txt             death_star              galaxy_far_far_away
+Computers-MacBook-Pro:homework_part_1 computer$ cd galaxy_far_far_away/
+Computers-MacBook-Pro:galaxy_far_far_away computer$ ls
+tatooine
+Computers-MacBook-Pro:galaxy_far_far_away computer$ cd tatooine/
+Computers-MacBook-Pro:tatooine computer$ ls
+luke.txt                obi_wan.txt
+millenium_falcon        storm_trooper.txt
+Computers-MacBook-Pro:tatooine computer$ cd ..
+Computers-MacBook-Pro:galaxy_far_far_away computer$ cd ..Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/tatooine/luke.txt
+ galaxy_far_far_away/tatooine/millenium_falcon/
+Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/tatooine/obi_wan.t
+xt  galaxy_far_far_away/tatooine/millenium_falcon/
+Computers-MacBook-Pro:homework_part_1 computer$ cd galaxy_far_far_away/
+Computers-MacBook-Pro:galaxy_far_far_away computer$ ls
+tatooine
+Computers-MacBook-Pro:galaxy_far_far_away computer$ cd tatooine/Computers-MacBook-Pro:tatooine computer$ ls
+millenium_falcon        storm_trooper.txt
+Computers-MacBook-Pro:tatooine computer$ cd millenium_falcon/Computers-MacBook-Pro:millenium_falcon computer$ ls
+chewbaca.txt    han_solo.txt    luke.txt        obi_wan.txt
+Computers-MacBook-Pro:millenium_falcon computer$
+
+7. Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   ├── princess_leia.txt│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    └── tatooine
+        ├── millenium_falcon
+        │   ├── chewbaca.txt
+        │   ├── han_solo.txt
+        │   ├── luke.txt
+        │   └── obi_wan.txt        └── storm_trooper.txt
+
+4 directories, 9 filesComputers-MacBook-Pro:homework_part_1 computer$ mv -r galaxy_far_far_away/tatooine/millen
+ium_falcon/ galaxy_far_far_away/
+mv: illegal option -- r
+usage: mv [-f | -i | -n] [-v] source target
+       mv [-f | -i | -n] [-v] source ... directory
+Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/tatooine/millenium
+_falcon/ galaxy_far_far_away/
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   ├── princess_leia.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── millenium_falcon
+    │   ├── chewbaca.txt
+    │   ├── han_solo.txt
+    │   ├── luke.txt
+    │   └── obi_wan.txt
+    └── tatooine
+        └── storm_trooper.txt
+
+4 directories, 9 files
+Computers-MacBook-Pro:homework_part_1 computer$
+
+8. Computers-MacBook-Pro:homework_part_1 computer$ tree
+.├── command.txt
+├── death_star
+│   ├── darth_vader.txt│   ├── princess_leia.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── millenium_falcon
+    │   ├── chewbaca.txt
+    │   ├── han_solo.txt
+    │   ├── luke.txt
+    │   └── obi_wan.txt
+    └── tatooine
+        └── storm_trooper.txt
+
+4 directories, 9 files
+Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/millenium_falcon/
+death_star/
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   ├── millenium_falcon
+│   │   ├── chewbaca.txt
+│   │   ├── han_solo.txt
+│   │   ├── luke.txt
+│   │   └── obi_wan.txt
+│   ├── princess_leia.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    └── tatooine
+        └── storm_trooper.txt
+
+4 directories, 9 files
+
+9. Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   ├── millenium_falcon
+│   │   ├── chewbaca.txt
+│   │   ├── han_solo.txt
+│   │   ├── luke.txt
+│   │   └── obi_wan.txt
+│   ├── princess_leia.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    └── tatooine
+        └── storm_trooper.txt
+
+4 directories, 9 files
+Computers-MacBook-Pro:homework_part_1 computer$ mv death_star/princess_leia.txt death_sta
+r/millenium_falcon/
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   ├── millenium_falcon
+│   │   ├── chewbaca.txt
+│   │   ├── han_solo.txt
+│   │   ├── luke.txt
+│   │   ├── obi_wan.txt
+│   │   └── princess_leia.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    └── tatooine
+        └── storm_trooper.txt
+
+4 directories, 9 files
+
+10. Computers-MacBook-Pro:homework_part_1 computer$ cd death_star/
+Computers-MacBook-Pro:death_star computer$ cd millenium_falcon/
+Computers-MacBook-Pro:millenium_falcon computer$ rm -r obi_wan.txt
+Computers-MacBook-Pro:millenium_falcon computer$ tree
+.
+├── chewbaca.txt
+├── han_solo.txt
+├── luke.txt
+└── princess_leia.txt
+
+0 directories, 4 files
+
+11. Computers-MacBook-Pro:millenium_falcon computer$ cd ..
+Computers-MacBook-Pro:death_star computer$ cd ..
+Computers-MacBook-Pro:homework_part_1 computer$ cd galaxy_far_far_away/
+Computers-MacBook-Pro:galaxy_far_far_away computer$ mkdir yavin_4
+Computers-MacBook-Pro:galaxy_far_far_away computer$ tree
+.
+├── tatooine
+│   └── storm_trooper.txt
+└── yavin_4
+
+2 directories, 1 file
+
+12. 
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   ├── millenium_falcon
+│   │   ├── chewbaca.txt
+│   │   ├── han_solo.txt
+│   │   ├── luke.txt
+│   │   └── princess_leia.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── tatooine
+    │   └── storm_trooper.txt
+    └── yavin_4
+
+5 directories, 8 files
+Computers-MacBook-Pro:homework_part_1 computer$ mv death_star/millenium_falcon/ galaxy_fa
+r_far_away/yavin_4/
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── tatooine
+    │   └── storm_trooper.txt
+    └── yavin_4
+        └── millenium_falcon
+            ├── chewbaca.txt
+            ├── han_solo.txt
+            ├── luke.txt
+            └── princess_leia.txt
+
+5 directories, 8 files
+
+13. Computers-MacBook-Pro:homework_part_1 computer$ cd galaxy_far_far_away/
+Computers-MacBook-Pro:galaxy_far_far_away computer$ cd yavin_4/
+Computers-MacBook-Pro:yavin_4 computer$ mkdir x_wing
+Computers-MacBook-Pro:yavin_4 computer$ tree
+.
+├── millenium_falcon
+│   ├── chewbaca.txt
+│   ├── han_solo.txt
+│   ├── luke.txt
+│   └── princess_leia.txt
+└── x_wing
+
+2 directories, 4 files
+
+14. ├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   ├── millenium_falcon
+│   │   ├── chewbaca.txt
+Computers-MacBook-Pro:yavin_4 computer$ cd ..
+Computers-MacBook-Pro:galaxy_far_far_away computer$ cd ..
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── tatooine
+    │   └── storm_trooper.txt
+    └── yavin_4
+        ├── millenium_falcon
+        │   ├── chewbaca.txt
+        │   ├── han_solo.txt
+        │   ├── luke.txt
+        │   └── princess_leia.txt
+        └── x_wing
+
+6 directories, 8 files
+Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/yavin_4/millenium_
+falcon/princess_leia.txt galaxy_far_far_away/yavin_4/
+Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/yavin_4/millenium_
+falcon/luke.txt galaxy_far_far_away/yavin_4/x_wing/
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── tatooine
+    │   └── storm_trooper.txt
+    └── yavin_4
+        ├── millenium_falcon
+        │   ├── chewbaca.txt
+        │   └── han_solo.txt
+        ├── princess_leia.txt
+        └── x_wing
+            └── luke.txt
+
+6 directories, 8 files
+
+15. Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/yavin_4/millenium_
+falcon/ galaxy_far_far_away/
+Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/yavin_4/x_wing/ ga
+laxy_far_far_away/
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── darth_vader.txt
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── millenium_falcon
+    │   ├── chewbaca.txt
+    │   └── han_solo.txt
+    ├── tatooine
+    │   └── storm_trooper.txt
+    ├── x_wing
+    │   └── luke.txt
+    └── yavin_4
+        └── princess_leia.txt
+
+6 directories, 8 files
+
+16. Computers-MacBook-Pro:homework_part_1 computer$ cd death_star/
+Computers-MacBook-Pro:death_star computer$ mkdir tie_fighter_1 tie_fighter_2 tie_fighter_
+3
+
+17.Computers-MacBook-Pro:death_star computer$ tree
+.
+├── darth_vader.txt
+├── storm_trooper.txt
+├── tie_fighter_1
+├── tie_fighter_2
+└── tie_fighter_3
+
+3 directories, 2 files
+Computers-MacBook-Pro:death_star computer$ mv darth_vader.txt tie_fighter_1
+
+18. Computers-MacBook-Pro:death_star computer$ tree
+.
+├── storm_trooper.txt
+├── tie_fighter_1
+│   └── darth_vader.txt
+├── tie_fighter_2
+└── tie_fighter_3
+
+3 directories, 2 files
+Computers-MacBook-Pro:death_star computer$ cp storm_trooper.txt tie_fighter_2
+Computers-MacBook-Pro:death_star computer$ cp storm_trooper.txt tie_fighter_3
+
+19. Computers-MacBook-Pro:death_star computer$ cd ..
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   ├── storm_trooper.txt
+│   ├── tie_fighter_1
+│   │   └── darth_vader.txt
+│   ├── tie_fighter_2
+│   │   └── storm_trooper.txt
+│   └── tie_fighter_3
+│       └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── millenium_falcon
+    │   ├── chewbaca.txt
+    │   └── han_solo.txt
+    ├── tatooine
+    │   └── storm_trooper.txt
+    ├── x_wing
+    │   └── luke.txt
+    └── yavin_4
+        └── princess_leia.txt
+
+9 directories, 10 files
+Computers-MacBook-Pro:homework_part_1 computer$ mv death_star/tie_fighter_1 galaxy_far_fa
+r_away/
+Computers-MacBook-Pro:homework_part_1 computer$ mv death_star/tie_fighter_2 galaxy_far_fa
+r_away/
+Computers-MacBook-Pro:homework_part_1 computer$ mv death_star/tie_fighter_3/ galaxy_far_f
+ar_away/
+
+20. .
+├── millenium_falcon
+│   ├── chewbaca.txt
+│   └── han_solo.txt
+├── tatooine
+│   └── storm_trooper.txt
+├── tie_fighter_1
+│   └── darth_vader.txt
+├── tie_fighter_2
+│   └── storm_trooper.txt
+├── tie_fighter_3
+│   └── storm_trooper.txt
+├── x_wing
+│   └── luke.txt
+└── yavin_4
+    └── princess_leia.txt
+
+7 directories, 8 files
+Computers-MacBook-Pro:galaxy_far_far_away computer$ rm -r tie_fighter_2
+Computers-MacBook-Pro:galaxy_far_far_away computer$ rm -r tie_fighter_3
+
+21. Computers-MacBook-Pro:galaxy_far_far_away computer$ cd ..
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── millenium_falcon
+    │   ├── chewbaca.txt
+    │   └── han_solo.txt
+    ├── tatooine
+    │   └── storm_trooper.txt
+    ├── tie_fighter_1
+    │   └── darth_vader.txt
+    ├── x_wing
+    │   └── luke.txt
+    └── yavin_4
+        └── princess_leia.txt
+
+7 directories, 8 files
+Computers-MacBook-Pro:homework_part_1 computer$ cd galaxy_far_far_away/x_wing/
+Computers-MacBook-Pro:x_wing computer$ touch the_force.txt
+
+22. Computers-MacBook-Pro:x_wing computer$ cd ../..
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+├── death_star
+│   └── storm_trooper.txt
+└── galaxy_far_far_away
+    ├── millenium_falcon
+    │   ├── chewbaca.txt
+    │   └── han_solo.txt
+    ├── tatooine
+    │   └── storm_trooper.txt
+    ├── tie_fighter_1
+    │   └── darth_vader.txt
+    ├── x_wing
+    │   ├── luke.txt
+    │   └── the_force.txt
+    └── yavin_4
+        └── princess_leia.txt
+
+7 directories, 9 files
+Computers-MacBook-Pro:homework_part_1 computer$ rm -r death_star/
+
+23. Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+└── galaxy_far_far_away
+    ├── millenium_falcon
+    │   ├── chewbaca.txt
+    │   └── han_solo.txt
+    ├── tatooine
+    │   └── storm_trooper.txt
+    ├── tie_fighter_1
+    │   └── darth_vader.txt
+    ├── x_wing
+    │   ├── luke.txt
+    │   └── the_force.txt
+    └── yavin_4
+        └── princess_leia.txt
+
+6 directories, 8 files
+Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/x_wing/ galaxy_far
+_far_away/yavin_4/
+Computers-MacBook-Pro:homework_part_1 computer$ mv galaxy_far_far_away/millenium_falcon/
+galaxy_far_far_away/yavin_4/
+Computers-MacBook-Pro:homework_part_1 computer$ tree
+.
+├── command.txt
+└── galaxy_far_far_away
+    ├── tatooine
+    │   └── storm_trooper.txt
+    ├── tie_fighter_1
+    │   └── darth_vader.txt
+    └── yavin_4
+        ├── millenium_falcon
+        │   ├── chewbaca.txt
+        │   └── han_solo.txt
+        ├── princess_leia.txt
+        └── x_wing
+            ├── luke.txt
+            └── the_force.txt
+
+6 directories, 8 files
